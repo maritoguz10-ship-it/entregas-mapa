@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa de Entregas</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #0f172a; color: #f8fafc; }
+      .app { display: grid; grid-template-rows: auto auto 1fr; height: 100dvh; }
+      header { padding: 12px 16px 4px; }
+      header h1 { margin: 0; font-size: 20px; }
+      header p { margin: 2px 0 0; font-size: 12px; color: #94a3b8; }
+      .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 8px 16px 12px; }
+      .kpi { background: #1e293b; border-radius: 10px; padding: 8px 6px; text-align: center; }
+      .kpi b { display: block; font-size: 22px; }
+      .kpi span { font-size: 11px; color: #94a3b8; }
+      .mapa { position: relative; min-height: 0; }
+      .leyenda { position: absolute; top: 10px; left: 10px; background: rgba(15, 23, 42, 0.9); border-radius: 10px; padding: 8px 10px; font-size: 12px; z-index: 2; }
+      .leyenda div { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
+      .punto { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+      .detalle { position: absolute; left: 10px; right: 10px; bottom: 14px; background: rgba(15, 23, 42, 0.95); border-radius: 12px; padding: 10px 14px; z-index: 2; font-size: 14px; }
+      .detalle button { position: absolute; top: 6px; right: 10px; background: none; border: 0; color: #94a3b8; font-size: 18px; }
+      .aviso { position: absolute; inset: 0; display: grid; place-items: center; z-index: 3; background: rgba(15, 23, 42, 0.8); padding: 20px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
+</html>
